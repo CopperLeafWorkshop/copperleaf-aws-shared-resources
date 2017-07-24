@@ -7,3 +7,6 @@ output "shared_tfstate_region" {
 output "shared_cluster_name" {
   value = "${aws_ecs_cluster.shared_cluster.name}"
 }
+output "shared_cluster_id" {
+  value = "${aws_ecs_cluster.shared_cluster.id}"
+}
