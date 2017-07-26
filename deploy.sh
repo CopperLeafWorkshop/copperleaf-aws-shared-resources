@@ -29,3 +29,4 @@ if [[ $REPLY =~ ^[Yy]$ ]]
 then
     terraform apply 
 fi
+terraform graph | dot -Tpng > graph-shared.png
