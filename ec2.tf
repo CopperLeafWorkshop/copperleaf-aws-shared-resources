@@ -95,7 +95,7 @@ data "template_file" "user_data" {
 
 resource "aws_key_pair" "container_access_key_pair" {
   key_name   = "informed-parents-uswest2"
-  public_key = "${file("./keys/informed-parents-uswest2.pub")}" 
+  public_key = "${file("./keys/shared_ec2.pub")}" 
 }
 
 
