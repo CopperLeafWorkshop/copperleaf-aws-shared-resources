@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# deploy.sh <rds_db_admin_password>
+# deploy.sh 
 #
 
 ###
@@ -23,10 +23,10 @@ fi
 # Run Terraform
 #
 
-terraform plan -var 'db_password=$1'
+terraform plan 
 read -p "Apply? (y/n) : " -n 1 -r
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-    terraform apply -var 'db_password=$1'
+    terraform apply 
 fi
 terraform graph | dot -Tpng > graph-shared.png
